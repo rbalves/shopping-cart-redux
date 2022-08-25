@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import store from "../store/index";
+import store from "../store";
 
 const useCart = () => {
   const [cart, setCart] = useState([]);

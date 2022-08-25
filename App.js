@@ -13,10 +13,10 @@ import Constants from "expo-constants";
 
 import { products } from "./data";
 
-import useCart from "./hooks/useCart";
+import useCart from "./src/hooks/useCart";
 
-import ProductCard from "./components/ProductCard";
-import Cart from "./components/Cart";
+import ProductCard from "./src/components/ProductCard";
+import Cart from "./src/components/Cart";
 
 export default function App() {
   const [showCart, setShowCart] = useState(false);
