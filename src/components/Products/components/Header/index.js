@@ -5,6 +5,7 @@ import { AntDesign } from "@expo/vector-icons";
 import useCart from "../../../../hooks/useCart";
 
 import { styles } from "./styles";
+import Counter from "../Counter";
 
 const Header = ({ setShowCart }) => {
   const { cart } = useCart();
@@ -20,28 +21,7 @@ const Header = ({ setShowCart }) => {
         <Pressable onPress={() => setShowCart(true)}>
           <View style={{ position: "relative", padding: 8 }}>
             <AntDesign name="shoppingcart" size={36} color="black" />
-            {cartQuantity > 0 && (
-              <View
-                style={{
-                  backgroundColor: "#A52A2A",
-                  borderRadius: "50%",
-                  position: "absolute",
-                  paddingVertical: 4,
-                  paddingHorizontal: 8,
-                  top: 0,
-                  right: 0,
-                }}
-              >
-                <Text
-                  style={{
-                    color: "#fff",
-                    textAlign: "center",
-                  }}
-                >
-                  {cartQuantity}
-                </Text>
-              </View>
-            )}
+            {cartQuantity > 0 && <Counter quantity={cartQuantity} />}
           </View>
         </Pressable>
       </View>
