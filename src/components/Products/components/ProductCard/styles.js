@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
     borderRadius: "5px",
     padding: 10,
     marginTop: 8,
+    display: "flex",
+    flexDirection: "row",
   },
   name: {
     fontSize: 16,
